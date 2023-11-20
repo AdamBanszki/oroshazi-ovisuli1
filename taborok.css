@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    
+}
+
+
+
+.logo{
+    width: 55px;
+    height: 55px;
+}
+
+
+.container{
+    min-height: 36rem;
+    background-image: url(map.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    white-space: wrap;
+    word-break: break-word;
+    
+}
+
+.egesz{
+    position: relative;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    height: 5rem;
+    -webkit-backdrop-filter: blur(35px);
+    backdrop-filter: blur(35px);
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(35px);
+    backdrop-filter: blur(35px);
+    z-index: -1;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar a{
+    font-weight: 500;
+    margin-left: 2.5rem;
+    text-decoration: none;
+    color: rgb(207, 207, 207);
+    transition: 0.2s ease;
+}
+
+.navbar a:hover{
+    color: #fff;
+}
+
+
+#check{
+    display: none;
+}
+
+
+.icons{
+    position: absolute;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    right: 5%;
+}
+
+/*breakpoints*/
+
+@media (max-width: 1072px) {
+    .header{
+        padding: 1.3rem 5%;
+    }  
+
+    .banner{
+        display: flex;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        align-items: center;
+        
+    }
+    .banner div ul{
+        text-align: center;
+        padding: 0;
+        padding-top: 2rem;
+    }
+
+
+    .hero{
+        padding: 3rem !important;
+        top: 4.5rem !important;
+        gap: 5rem !important;
+    }
+
+    .indian{
+        padding: 3rem !important;
+        gap: 5rem !important;
+    }
+
+    .sport{
+        padding: 3rem !important;
+        gap: 5rem !important;
+    }
+
+
+    form{
+        padding: 0 2rem 0 2rem !important;
+    }
+
+    .transparent-bg h1{
+        padding: 1.5rem !important; 
+        text-align: center;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .icons{
+        display: block;
+    }
+
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+
+    .header{
+        background-color: rgb(42, 34, 30);
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 0;
+        height: 100vh;
+        background-color: rgb(42, 34, 30) !important;
+        transition: .3s ease;
+        z-index: 5;
+    }
+    
+    
+    #check:checked~.navbar{
+        width: 50vw;
+    }
+
+    .navbar a{
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        display: block;
+        text-align: center;
+    }
+
+
+    .hero{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2.5rem !important;
+        padding: 0.5rem !important;
+        top: 6rem !important;
+    }
+
+    .container{
+        min-height: 50rem;
+        background-attachment: scroll !important;
+    }
+
+
+    .indian-main{
+        min-height: 50rem;
+        background-attachment: scroll !important;
+    }
+
+    .indian{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2.5rem !important;
+    }
+
+
+
+    .sport-main{
+        min-height: 50rem;
+        background-attachment: scroll !important;
+    }
+
+    .sport{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2.5rem !important;
+    }
+
+
+    .footer{
+        gap: 2rem !important;
+    }
+
+
+    
+
+}
+
+
+@media (max-width: 510px){
+    
+    .footer{
+        flex-direction: column;
+    }
+    
+
+    .indian{
+        gap: 1rem !important;
+    }
+
+    .container{
+        height: 40rem !important;
+    }
+    
+}
+
+
+
+.right{
+    width: 22rem;
+}
+
+.left{
+    width: 24rem;
+}
+
+
+
+
+
+::-webkit-scrollbar{
+    height: 0.5rem;
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:#a55000d5;
+    border-radius: 25px;
+}
+
+
+
+
+
+/*hero-section*/
+
+.korrekcio{
+    display: flex;
+    width: 100%;
+}
+
+
+.hero{
+    position: absolute;
+    top: 0.1rem;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding: 10rem 10rem 0rem 10rem;
+    gap: 10rem;
+    justify-content: center;
+}
+
+
+.left p{
+    color: #c4c4c4;
+    font-size: 0.9em;
+    padding: 1rem;
+}
+
+.big-text{
+    color: rgb(241, 241, 241);
+    font-size: 2.5rem;
+    line-height: 1.4;
+}
+
+.small-text{
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 1rem 1rem 1rem 0rem;
+    
+}
+
+.exploring-btn{
+    color: rgb(239, 239, 239);
+    background-color: #a55000d5;
+    border: none;
+    border-radius: 15px;
+    padding: 0.6rem 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: .3s ease;
+    outline: none;
+}
+
+.exploring-btn:hover{
+    transform: scale(1.05);
+}
+
+.exploring-btn:active{
+    transform: scale(.90);
+}
+
+
+
+.indian-main{
+    height: 32rem;
+    width: 100%;
+    background-image: url(indian1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 1rem;
+
+}
+
+.indian{
+    margin: auto;
+    display: flex;
+    padding: 5rem 10rem 0rem 10rem;
+    gap: 10rem;
+    justify-content: center;
+}
+
+
+
+
+.sport-main{
+    height: 32rem;
+    width: 100%;
+    background-image: url(sport.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 1rem;
+}
+
+
+.sport{
+    margin: auto;
+    display: flex;
+    padding: 5rem 10rem 0rem 10rem;
+    gap: 10rem;
+    justify-content: center;
+}
+
+
+
+#contact-us{
+    width: 100%;
+    height: 70rem;
+    background: url(3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5rem;
+}
+
+
+.transparent-bg{
+    width: 60%;
+    height: 60rem;
+    margin: auto;
+    background-color: rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+form{
+    color: white;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.rows{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.transparent-bg h1{
+    color: white;
+    padding: 5rem 7rem 3rem 7rem;
+}
+
+input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    padding-top: 0.5rem;
+    transition: 0.3s ease;
+    color: white;
+}
+
+textarea{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: white;
+    padding-top: 1rem;
+}
+
+
+#submit-btn{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 1.5rem;
+    border-color: #E5E4E2;
+    font-family: 'Poppins';
+}
+
+
+.section4{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+
+.footer{
+    display: flex;
+    gap: 5rem;
+    text-align: center;
+    color: #dbdbdb;
+    align-items: center;
+    margin: auto;
+    
+}
+
+.bx{
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.footer p{
+    font-size: 0.8rem;
+}
+
+
+.jogok{
+    background-color: rgb(34, 34, 34);
+    color: #d2d2d2;
+    font-size: 0.7rem;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.jogok1{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+span{
+    color: rgb(185, 90, 0);
+}
