@@ -662,11 +662,11 @@ u{
     padding-top: 2rem;
     color: #E5E4E2;
     text-align: center;
-    font-size: 1em;
+    font-size: 1em !important;
 }
 
 span{
-    font-size: 2em;
+    font-size: 2em !important;
 }
 
 
